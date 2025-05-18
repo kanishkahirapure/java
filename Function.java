@@ -1,4 +1,4 @@
-// public class function {
+// public class Function {
     
 //         // method that adds two numbers
 //         public static int add(int a, int b) {
@@ -15,7 +15,7 @@
 
 
 
-// public class function{
+// public class Function{
 //     public static int multiply(int a, int b){
 //         int product = a * b;
 //         return product;
@@ -32,7 +32,7 @@
 // }
 
 
-// public class function{
+// public class Function{
 
 //     public static int factorial(int n){
 //         int f = 1;
@@ -50,7 +50,7 @@
 // }
 
 
-//public class function{
+//public class Function{
 
     // public static int sum(int a, int b){
     //     return a + b;
@@ -81,7 +81,7 @@
 
 
 
-// public class function{
+// public class Function{
 
 //     public static boolean isPrime(int n){
 //         boolean isPrime = true;
@@ -111,7 +111,7 @@
 
 
 
-// public class function{
+// public class Function{
 
 //     public static void binToDec(int binNum){
 //         int myNum = binNum;
@@ -152,7 +152,7 @@
 
 
 
-// public class function{
+// public class Function{
 //     public static int computeAverage(int a, int b, int c){
 //         int sum = a + b + c;
 //         int average = sum / 3;
@@ -168,7 +168,7 @@
 
 
 
-// public class function{
+// public class Function{
 //     public static boolean isEven(int n){
 //         // if (n % 2 == 0){
 //         //     return true;
@@ -187,7 +187,7 @@
 
 
 
-// public class function {
+// public class Function {
 
 //     public static boolean isPalindrome(int n) {
 //         int original = n;
@@ -212,7 +212,7 @@
 
 
 
-public class SumOfDigits {
+public class Function {
 
     // Method to compute sum of digits
     public static int sumDigits(int number) {

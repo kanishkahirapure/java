@@ -1,4 +1,4 @@
-// public class pattern {
+// public class Pattern {
 //     public static void main(String args[]){
 //         for(int line = 1; line<=4; line++){
 
@@ -12,7 +12,7 @@
 // }
 
 
-// public class pattern {
+// public class Pattern {
 //     public static void main(String args[]){
 //         int n = 4; // Number of lines in the pattern
 //         for(int line = 1; line<=n; line++){
@@ -27,7 +27,7 @@
 // }
 
 
-// public class pattern {
+// public class Pattern {
 //     public static void main(String args[]){
 //         int n = 4; // Number of lines in the pattern
 //         for(int line = 1; line<=n; line++){
@@ -42,7 +42,7 @@
 // }
 
 
-// public class pattern {
+// public class Pattern {
 //     public static void main(String args[]){
 //         int n = 4; // Number of lines in the pattern
 //         for(int line = 1; line<=n; line++){
@@ -58,7 +58,7 @@
 
 
 
-// public class pattern {
+// public class Pattern {
 //     public static void main(String args[]){
 //         int n = 4; // Number of lines in the pattern
 //         char ch = 'A'; // Starting character
@@ -77,7 +77,7 @@
 // }
 
 
-// public class pattern{
+// public class Pattern{
 //     public static void main(String args[]){
 //         int n = 7;  //lines
         
@@ -92,7 +92,7 @@
 // }
 
 
-// public class pattern{
+// public class Pattern{
 //     public static void main(String args[]){
 //         int n = 4;  //lines
         
@@ -113,7 +113,7 @@
 // }
 
 
-public class pattern{
+public class Pattern{
     public static void main(String args[]){
         int n = 5;
 
