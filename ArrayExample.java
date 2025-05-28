@@ -84,7 +84,7 @@
 
 
 
-public class ArrayExample{
+//public class ArrayExample{
 //     public static int binarySearch(int numbers[], int key){
 //         int start = 0, end = numbers.length-1;
 //         while(start <= end){
@@ -215,52 +215,119 @@ public class ArrayExample{
 //     }
 
 
-public static void maxSubarraySum(int numbers[]){
-        int currSum = 0;
-        int maxSum = Integer.MIN_VALUE;
-        int prefix[] = new int [numbers.length];
+// public static void maxSubarraySum(int numbers[]){
+//         int currSum = 0;
+//         int maxSum = Integer.MIN_VALUE;
+//         int prefix[] = new int [numbers.length];
 
-        prefix[0] = numbers[0];
-        //calculare prefix array
-        for(int i=1; i<prefix.length; i++){
-            prefix[i] = prefix[i-1] + numbers[i];
-        }
+//         prefix[0] = numbers[0];
+//         //calculare prefix array
+//         for(int i=1; i<prefix.length; i++){
+//             prefix[i] = prefix[i-1] + numbers[i];
+//         }
 
-        for(int i=0; i<numbers.length; i++){
-            int start = i;
-            for(int j=i; j<numbers.length; j++){
-                int end = j;
+//         for(int i=0; i<numbers.length; i++){
+//             int start = i;
+//             for(int j=i; j<numbers.length; j++){
+//                 int end = j;
 
-                currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start-1];
+//                 currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start-1];
 
-                if(maxSum < currSum){
-                    maxSum = currSum;
-                }
-            }
-        }
+//                 if(maxSum < currSum){
+//                     maxSum = currSum;
+//                 }
+//             }
+//         }
 
-        System.out.println("Max sum ="+ maxSum);
-    }
+//         System.out.println("Max sum ="+ maxSum);
+//     }
 
-    public static void kadanes(int numbers[]){
-        int ms = Integer.MIN_VALUE;
-        int cs = 0;
+//     public static void kadanes(int numbers[]){
+//         int ms = Integer.MIN_VALUE;
+//         int cs = 0;
 
-        for(int i=0; i<numbers.length; i++){
-            cs = cs + numbers[i];
-            if(cs < 0){
-                cs = 0;
-            }
-            ms = Math.max(cs, ms);
-        }
+//         for(int i=0; i<numbers.length; i++){
+//             cs = cs + numbers[i];
+//             if(cs < 0){
+//                 cs = 0;
+//             }
+//             ms = Math.max(cs, ms);
+//         }
 
-        System.out.println("our max subarray sum is : "+ ms);
-    }
+//         System.out.println("our max subarray sum is : "+ ms);
+//     }
 
-    public static void main(String args[]){
-        int numbers[] = {-2, -3, 4, -1, -2, 1, 5, -3};
-        kadanes(numbers);
-    }
+//     public static void main(String args[]){
+//         int numbers[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+//         kadanes(numbers);
+//     }
     
 
+
+// public static int trappedRainwater(int height[]){
+//     int n = height.length;
+//     //calculate left max boundary - array
+//     int leftMax[] = new int[n];
+//     leftMax[0] = height[0];
+//     for(int i=1; i<n; i++){
+//         leftMax[i] = Math.max(leftMax[i-1], height[i]);
+//     }
+
+//     //calculate right max boundary - array
+//     int rightMax[] = new int[n];
+//     rightMax[n-1] = height[n-1];
+//     for(int i=n-2; i>=0; i--){
+//         rightMax[i] = Math.max(rightMax[i+1], height[i]);
+//     }
+    
+//     int trappedWater = 0;
+//     //loop
+//     for(int i=0; i<n; i++){
+//         //waterLevel = min(leftmax bound, rightmax bound)
+//         int waterLevel = Math.min(leftMax[i], rightMax[i]);
+
+//         //trapped water = waterlevel - height[i]
+//         trappedWater += waterLevel - height[i];
+//     }
+
+//     return trappedWater;
+
+// }
+
+//    public static void main(String args[]){
+//     int height[] = {4, 2, 0, 6, 3, 2, 5};
+//     System.out.println(trappedRainwater(height));
+//    }
+ // }
+
+
+  public class ArrayExample{
+    public int search(int[] nums, int target){
+        int n= nums.length;
+
+        int low = 0;
+        int high = n-1;
+
+        while(low <= high){
+            
+            int mid = (low + high)/2;
+            if(nums[mid] == target) 
+            return mid;
+
+            else if(nums[low]<= nums[mid]){
+                if (target >= nums [low] && target <= nums[mid])
+                high = mid-1;
+                else
+                low = mid + 1;
+            } else{
+                
+                if(target >= nums[mid + 1] && target <= nums[high])
+                low = mid+1;
+                else
+                high = mid-1;
+
+            }
+        }
+        return -1;
+    }
   }
