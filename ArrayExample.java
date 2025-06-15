@@ -300,10 +300,11 @@
 //    }
  // }
 
-
+import java.util.*;
+ // search in rotated array 33
   public class ArrayExample{
-    public int search(int[] nums, int target){
-        int n= nums.length;
+    public int search(int nums[], int target){
+        int n = nums.length;
 
         int low = 0;
         int high = n-1;
@@ -330,4 +331,74 @@
         }
         return -1;
     }
+
+
+//trapping rain water
+    public int trap(int[] height){
+        int n = height.length;
+
+        int lmax = height[0];
+        int rmax = height[n-1];
+
+        int low = 1;
+        int high = n-2;
+        int ans = 0;
+
+        while(low <= high){
+
+            lmax = Math.max(lmax,height[low]);
+            rmax = Math.max(rmax,height[high]);
+
+            if(lmax < rmax){
+                low++;
+            }else{
+                ans += rmax - height[high];
+                high--;
+            }
+        }
+
+        return ans;
+    }
+
+
+    //3sum 15
+
+    
+    public List<List<Integer>> threeSum(int[] nums){
+        int n = nums.length;
+        Arrays.sort(nums);//sort the array
+        Set<List<Integer>> set = new HashSet<>();
+        List<List<Integer>> result = new ArrayList<>();
+
+        int low = 0;
+        int high = n - 1;
+        int mid = high - 1;
+
+        while(high >= 2){
+            while(low <mid){
+                int sum = nums[low] + nums[mid] + nums[high];
+
+                if(sum == 0){
+                    //add the triplet to the set to avoid duplicates
+                    set.add(Arrays.asList(nums[low], nums[mid], nums[high]));
+                    low++;
+                    mid--;
+                }else if(sum > 0){
+                    mid--;
+                }else{
+                    low++;
+                }
+            }
+
+            high--; //move to the next potential "high"value
+            mid = high - 1; //rest mid to just before high
+            low = 0; // rest low to the start
+        }
+
+        //convert the set to a list for the result
+        result.addAll(set);
+        return result;
+    }
+
+
   }
