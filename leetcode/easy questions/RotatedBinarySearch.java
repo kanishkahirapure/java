@@ -39,3 +39,34 @@ public class RotatedBinarySearch {
         System.out.println("Index of target is: " + result);
     }
 }
+
+
+
+// Best Time to Buy and Sell Stock
+
+
+// public class MaxProfit {
+//     public static int maxProfit(int[] prices) {
+//         int minPrice = Integer.MAX_VALUE;
+//         int maxProfit = 0;
+
+//         for (int i = 0; i < prices.length; i++) {
+//             if (prices[i] < minPrice) {
+//                 minPrice = prices[i]; // update min
+//             } else if (prices[i] - minPrice > maxProfit) {
+//                 maxProfit = prices[i] - minPrice; // update profit
+//             }
+//         }
+
+//         return maxProfit;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] prices1 = {7, 1, 5, 3, 6, 4};
+//         int[] prices2 = {7, 6, 4, 3, 1};
+
+//         System.out.println("Max Profit (Example 1): " + maxProfit(prices1)); // Output: 5
+//         System.out.println("Max Profit (Example 2): " + maxProfit(prices2)); // Output: 0
+//     }
+// }
+

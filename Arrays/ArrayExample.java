@@ -1,4 +1,4 @@
-// import java .util.*;
+import java.util.*;
 
 // public class ArrayExample {
 //     public static void main(String[]args){
@@ -109,6 +109,8 @@
         
 //         System.out.println("index for key is : " + binarySearch(numbers, key));
 //     }
+
+
    
 //     public static void reverse(int number[]){
 //         int first = 0, last = number.length-1;

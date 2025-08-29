@@ -1,4 +1,4 @@
-public class PluseOne {
+public class PlusOne {
     public static int[] plusOne(int[] digits) {
         for (int i = digits.length - 1; i >= 0; i--) {
             // Agar current digit 9 se chhoti hai
@@ -28,3 +28,6 @@ public class PluseOne {
         }
     }
 }
+
+//output: Result: 1 2 4
+// Explanation: Last digit 3 ko 1 add kiya, toh 4 ban gaya

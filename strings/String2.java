@@ -20,5 +20,15 @@ public class String2 {
         System.out.println(fullName.equalsIgnoreCase("tony stark")); // Checks if the string is equal to "tony stark" ignoring case
         System.out.println(fullName.charAt(0)); // Gets the character at index 0
         System.out.println(fullName.charAt(5)); // Gets the character at index 5
+
+
+        //concatenation
+        String firstName = "Kanishka";
+        String lastName = "Hirapure";
+        String Name = firstName + " " + lastName;
+        System.out.println(fullName);
     }
 }
+
+
+
